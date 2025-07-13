@@ -1,0 +1,85 @@
+# Alzheimer's Disease Classification using Hybrid Deep Learning with Multi-Layer U-Net and XAI
+
+This repository contains the complete code and project modules used for the paper:
+
+**"Alzheimer’s Disease Classification Using Hybrid Deep Learning Approach with Multi-Layer U-Net Segmentation and XAI Driven Analysis"**
+
+## 🔬 Project Overview
+
+The proposed method includes:
+
+- **Brain Segmentation** using Vanilla U-Net
+- **Gray Matter Segmentation** using Multi-Layer U-Net
+- **Classification** using a Multi-Scale EfficientNet with Support Vector Machine (SVM)
+- **Explainable AI (XAI)** using enhanced saliency maps to highlight disease-relevant brain regions
+
+---
+
+## 📁 Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| `Segmentation.zip` | Contains code for Vanilla U-Net and Multi-Layer U-Net for brain and gray matter segmentation. |
+| `Classification.zip` | Contains classification code using EfficientNet and SVM. |
+| `Explainable AI.zip` | Code for generating enhanced saliency maps, colorized overlays, and region-wise interpretability. |
+| `README.md` | This file. |
+| `LICENSE` | Open-source license for use and redistribution. |
+| `.gitignore` | Git tracking rules. |
+
+---
+
+## ⚙️ Requirements
+
+All models were trained and tested on **Google Colab** using:
+
+- Python 3.8+
+- TensorFlow / Keras
+- OpenCV
+- NumPy
+- Matplotlib
+
+Install all required packages using:
+
+```bash
+pip install -r requirements.txt
+
+Running the Project
+Segmentation:
+
+Unzip Segmentation.zip
+
+Run brain_segmentation.py for skull stripping
+
+Run gm_segmentation.py for gray matter segmentation using Multi-Layer U-Net
+
+Classification:
+
+Unzip Classification.zip
+
+Run the EfficientNet + SVM pipeline in classification_model.py
+
+Explainable AI:
+
+Unzip Explainable AI.zip
+
+Run xai_saliency_map.py to visualize saliency on segmented gray matter
+
+Modify to switch between AD, MCI, and CN classes
+
+📊 Dataset
+The dataset used is from the ADNI database. For reproducibility:
+
+Gray matter masks were created via segmentation.
+
+Data was split into 60% train, 20% validation, 20% test.
+
+Note: Due to ADNI's licensing, the dataset itself is not included here. You must request access via: https://ida.loni.usc.edu
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+For queries, please contact the corresponding author:
+Dr. Muhammad Zubair
+Email: [Sheikhzubair333@gmail.com]
+GitHub: github.com/Shzubair023
